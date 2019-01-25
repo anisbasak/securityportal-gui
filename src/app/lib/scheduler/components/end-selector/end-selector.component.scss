@@ -1,0 +1,17 @@
+:host {
+  display: block;
+}
+
+.end-group {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+}
+
+.type-select {
+  margin-right: 16px;
+}
+
+.date-input {
+  flex-grow: 1;
+}

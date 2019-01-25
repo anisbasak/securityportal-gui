@@ -1,0 +1,18 @@
+.sat-inline-input {
+  // No need for placeholder room
+  .mat-input-infix {
+    margin-top: 0;
+    border-top: 0;
+  }
+
+  // No need for subscripts
+  .mat-input-wrapper {
+    padding-bottom: 0;
+  }
+  .mat-input-underline {
+    bottom: 0;
+  }
+  .mat-input-subscript-wrapper {
+    display: none;
+  }
+}

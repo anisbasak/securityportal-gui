@@ -1,0 +1,25 @@
+$card-margin: 8px;
+
+:host {
+  display: block;
+}
+
+td {
+  padding: 4px 8px 4px 0;
+}
+
+.card-collection {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: stretch;
+  margin: -$card-margin;
+}
+
+.mat-card {
+  min-height: 176px;
+  width: 256px;
+  margin: $card-margin;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}

@@ -1,0 +1,29 @@
+@import '~@angular/material/theming';
+
+$ncsu-sat-light-primary: mat-palette($mat-red, 700);
+$ncsu-sat-light-accent:  mat-palette($mat-blue-grey);
+$ncsu-sat-light-warn:    mat-palette($mat-red, 700);
+
+$ncsu-sat-dark-primary:  mat-palette($mat-red, 700);
+$ncsu-sat-dark-accent:   mat-palette($mat-blue-grey, 400);
+$ncsu-sat-dark-warn:     mat-palette($mat-red, 700);
+
+// Mergeable background palette for light theme
+$ncsu-light-theme-background: (
+  row-hover: map_get($mat-grey, 200),
+  row-focus: map_get($mat-grey, 100),
+);
+
+// Mergeable foreground palette for light theme
+$ncsu-light-theme-foreground: (
+
+);
+
+// Merge the foreground and background maps
+$mat-light-theme-background: map-merge($ncsu-light-theme-background, $mat-light-theme-background);
+$mat-light-theme-foreground: map-merge($ncsu-light-theme-foreground, $mat-light-theme-foreground);
+
+
+// Create the theme object (a Sass map containing all of the palettes).
+$ncsu-sat-theme-light: mat-light-theme($ncsu-sat-light-primary, $ncsu-sat-light-accent, $ncsu-sat-light-warn);
+// $ncsu-sat-theme-dark:  mat-dark-theme($ncsu-sat-dark-primary, $ncsu-sat-dark-accent, $ncsu-sat-dark-warn);

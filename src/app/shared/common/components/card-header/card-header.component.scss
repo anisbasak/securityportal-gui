@@ -1,0 +1,43 @@
+@import 'common';
+
+$background: map-get($theme, background);
+$primary: map-get($theme, primary);
+$accent: map-get($theme, accent);
+$warn: map-get($theme, warn);
+
+$is-dark-theme: map-get($theme, is-dark);
+$default-header: if($is-dark-theme, mat-color($background, app-bar), #f0f0f0);
+
+:host.sat-card-header {
+  background-color: $default-header;
+
+  display: flex;
+  align-items: center;
+  min-height: 64px;
+
+  padding: 24px;
+  margin: -24px -24px 24px -24px;
+
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+
+  &.sat-primary {
+    background-color: mat-color($primary);
+    color: mat-color($primary, default-contrast);
+  }
+
+  &.sat-accent {
+    background-color: mat-color($accent);
+    color: mat-color($accent, default-contrast);
+  }
+
+  &.sat-warn {
+    background-color: mat-color($warn);
+    color: mat-color($warn, default-contrast);
+  }
+
+  @media ($mat-xsmall) {
+    padding: 16px;
+    margin: -24px -16px 16px -16px;
+  }
+}

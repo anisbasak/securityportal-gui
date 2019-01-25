@@ -1,0 +1,41 @@
+@import 'common';
+
+$image-size: 256px;
+
+:host {
+  display: block;
+  overflow: hidden;
+}
+
+.profile-image {
+  @include fallback-image($image-size);
+  background-size: cover;
+  background-position: 50% 25%;
+  position: relative;
+  height: $image-size;
+  width: $image-size;
+  border-radius: 4px;
+  opacity: 0;
+  transition: opacity $desktop-timing $standard-curve;
+
+  &.show {
+    opacity: 1;
+  }
+
+  &:hover {
+    .gallery-icon {
+      opacity: 1;
+    }
+  }
+}
+
+.gallery-icon {
+  @include mat-icon-size(18px);
+  color: $black-54;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity $desktop-timing $standard-curve;
+  position: absolute;
+  top: 8px;
+  right: 8px;
+}

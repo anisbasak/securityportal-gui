@@ -1,0 +1,47 @@
+@import 'common';
+
+$is-dark-theme:  map-get($theme, is-dark);
+$primary: map-get($theme, primary);
+$foreground: map-get($theme, foreground);
+
+$selected-color: if($is-dark-theme, mat-color($primary, A200), mat-color($primary, 600));
+$box-shadow-color: if($is-dark-theme, rgba(255,255,255,0.12), rgba(0,0,0,0.12));
+
+:host {
+  display: block;
+}
+
+.first {
+  box-shadow: 0 -1px 0 $box-shadow-color inset;
+
+  // Matches specifity to override without !important
+  &.mat-nav-list[dense] .mat-list-item {
+    height: 56px;
+  }
+}
+
+.header {
+  text-transform: uppercase;
+  padding: 24px 16px 8px;
+}
+
+.caption {
+  color: mat-color($foreground, secondary-text);
+}
+
+a.selected {
+  color: $selected-color;
+}
+
+// Matches specifity to override without !important
+.mat-nav-list[dense] {
+  padding: 0;
+}
+
+.mat-list-item {
+  color: mat-color($foreground, secondary-text);
+
+  &:focus {
+    outline: none;
+  }
+}

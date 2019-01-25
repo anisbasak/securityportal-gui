@@ -1,0 +1,24 @@
+@import '~@angular/material/theming';
+
+// Mobile
+$xsmall-timing: 300ms;
+$xsmall-timing-full-screen: 375ms;
+$xsmall-timing-enter-screen: 225ms;
+$xsmall-timing-exit-screen: 195ms;
+
+// Tablet (30% longer than mobile)
+$small-timing: $xsmall-timing * 1.3;
+$small-timing-full-screen: $xsmall-timing-full-screen * 1.3;
+$small-timing-enter-screen: $xsmall-timing-enter-screen * 1.3;
+$small-timing-exit-screen: $xsmall-timing-exit-screen * 1.3;
+
+// Desktop (always faster)
+$desktop-timing: 175ms;
+$desktop-timing-full-screen: 200ms;
+$desktop-timing-enter-screen: 160ms;
+$desktop-timing-exit-screen: 150ms;
+
+$standard-curve: cubic-bezier(0.4, 0.0, 0.2, 1);
+$deceleration-curve: cubic-bezier(0.0, 0.0, 0.2, 1);
+$acceleration-curve: cubic-bezier(0.4, 0.0, 1, 1);
+$sharp-curve: cubic-bezier(0.4, 0.0, 0.6, 1);

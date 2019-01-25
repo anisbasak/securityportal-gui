@@ -1,0 +1,27 @@
+@import 'common';
+
+$foreground: map-get($theme, foreground);
+
+:host {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.mat-form-field {
+  flex: 1 1 auto;
+  margin: 0 8px;
+}
+
+.optional-input.empty {
+  .mat-datepicker-toggle {
+    opacity: 0.38;
+  }
+
+  & ::ng-deep input {
+    color: mat-color($foreground, hint-text);
+  }
+}
+
+.remove-button {
+  align-self: center;
+}

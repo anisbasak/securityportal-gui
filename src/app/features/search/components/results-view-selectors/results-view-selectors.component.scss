@@ -1,0 +1,19 @@
+
+// TODO allow for dark theme
+$default-icon: rgba(0,0,0,0.2);
+$active-icon: rgba(0,0,0,0.54);
+
+:host {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.mat-icon {
+  cursor: pointer;
+  color: $default-icon;
+  margin: 8px 0 0 8px;
+
+  &.selected {
+    color: $active-icon;
+  }
+}

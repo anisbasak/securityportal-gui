@@ -1,0 +1,41 @@
+@import 'common';
+
+$accent: map-get($theme, accent);
+
+:host {
+  display: block;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 512px;
+  margin: 64px auto 0px;
+}
+
+.subheading {
+  margin-bottom: 32px;
+}
+
+h1 {
+  color: mat-color($accent);
+  margin: 0;
+}
+
+.button {
+  margin-top: 32px;
+}
+
+@media ($mat-xsmall) {
+  .container {
+    margin-top: 48px;
+  }
+  h1 {
+    @include material-headline();
+    color: mat-color($accent);
+  }
+  .subheading {
+    @include material-caption();
+  }
+}

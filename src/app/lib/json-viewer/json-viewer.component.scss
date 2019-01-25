@@ -1,0 +1,77 @@
+$toggler-offset: 12px;
+
+$item-key: #881391;
+$item-default: #212121;
+
+$item-type-string: #C41A16;
+$item-type-value: #1C00CF;
+$item-type-object: #7F7F7F;
+
+
+@mixin colorValue($color) {
+  .item__value { color: $color; }
+}
+
+:host {
+  display: block;
+  font-family: monospace;
+  font-size: 1em;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  cursor: default;
+}
+
+.item {
+  padding: 4px 4px 4px 0;
+  margin-left: $toggler-offset;
+
+  &__title {
+    white-space: nowrap;
+  }
+
+  &__key {
+    color: $item-key;
+  }
+
+  &__colon, &__value {
+    color: $item-default;
+  }
+
+  &__type--object, &__type--date,
+  &__type--null, &__type--undefined {
+    @include colorValue($item-type-object);
+  }
+
+  &__type--string {
+    @include colorValue($item-type-string);
+  }
+
+  &__type--number, &__type--boolean {
+    @include colorValue($item-type-value);
+  }
+
+}
+
+.toggler {
+  font-size: .8em;
+  line-height: 1.2em;
+  vertical-align: middle;
+  opacity: .7;
+  position: absolute;
+  margin-left: -$toggler-offset;
+  margin-top: 2px;
+
+  &::after {
+    display: inline-block;
+    content: "►";
+  }
+
+  &.opened {
+    margin-left: -14px;
+
+    &::after {
+      transform: rotate(90deg);
+    }
+  }
+}

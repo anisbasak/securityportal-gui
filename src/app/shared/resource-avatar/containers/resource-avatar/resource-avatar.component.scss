@@ -1,0 +1,26 @@
+@import 'common';
+
+$image-size: 36px;
+
+:host {
+  display: block;
+  overflow: hidden;
+}
+
+.profile-image {
+  @include fallback-image($image-size);
+  background-size: cover;
+  background-position: 50% 25%;
+  height: $image-size;
+  width: $image-size;
+  opacity: 0;
+  transition: opacity $desktop-timing $standard-curve;
+
+  &.show {
+    opacity: 1;
+  }
+
+  &.round {
+    border-radius: 50%;
+  }
+}

@@ -1,0 +1,12 @@
+$dim-icon: rgba(0,0,0,0.2);
+
+:host {
+  display: block;
+}
+
+.end-icon {
+  display: flex;
+  justify-content: center;
+  color: $dim-icon;
+  margin: 16px auto;
+}

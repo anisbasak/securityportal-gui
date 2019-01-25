@@ -1,0 +1,9 @@
+@import '../material-variables';
+
+// Sets a consistent right & bottom margin on chips
+// Must have a higher specificity than 4 classes/pseduo-classes
+.mat-chip-list.sat-equal-chip-margin .mat-chip-list-wrapper {
+  mat-chip.mat-chip {
+    margin: 0 $mat-chips-chip-margin $mat-chips-chip-margin 0;
+  }
+}

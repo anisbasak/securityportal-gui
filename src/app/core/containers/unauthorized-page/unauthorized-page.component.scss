@@ -1,0 +1,38 @@
+@import 'common';
+
+$accent: map-get($theme, accent);
+
+:host {
+  display: block;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 512px;
+  margin: 64px auto 0px;
+}
+
+h1 {
+  color: mat-color($accent);
+  margin: 0;
+}
+
+.button {
+  margin-top: 32px;
+}
+
+.button-group {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-flow: row wrap;
+}
+
+@media ($mat-xsmall) {
+  .container {
+    margin-top: 48px;
+  }
+}

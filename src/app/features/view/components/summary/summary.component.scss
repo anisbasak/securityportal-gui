@@ -1,0 +1,17 @@
+@import 'common';
+
+$foreground: map-get($theme, foreground);
+
+:host {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+h3 {
+  color: mat-color($foreground, secondary-text);
+  margin: 0 0 16px;;
+}
+
+resource-gallery {
+  margin: 0 24px 24px 0;
+}

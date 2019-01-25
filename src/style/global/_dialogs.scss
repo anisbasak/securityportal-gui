@@ -1,0 +1,40 @@
+// Show dialog with no padding
+.sat-no-padding-dialog .mat-dialog-container {
+  padding: 0;
+}
+
+// Stretch dialog across full viewport
+.sat-full-screen-dialog .mat-dialog-container {
+  max-width: none;
+  width: 100vw;
+  height: 100vh;
+}
+
+// Add position: relative to a dialog container
+.sat-relative-position-dialog .mat-dialog-container {
+  position: relative;
+}
+
+// Center dialog (use with set width)
+.sat-centered-dialog {
+  max-width: 80vw;
+
+  .mat-dialog-container {
+    max-width: none;
+  }
+}
+
+// Add a very light overlay
+.sat-overlay-extra-light-backdrop {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+// Add a dark overlay
+.sat-overlay-dark-backdrop {
+  background: rgba(0, 0, 0, 0.75);
+}
+
+// Add an extra dark overlay, default is 0.288 black
+.sat-overlay-extra-dark-backdrop {
+  background: rgba(0, 0, 0, 0.9);
+}

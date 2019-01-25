@@ -1,0 +1,30 @@
+@import 'common';
+
+$foreground: map-get($theme, foreground);
+$card-margin: 8px;
+
+:host {
+  display: block;
+}
+
+h4 {
+  color: mat-color($foreground, secondary-text);
+  margin: 48px 0 24px;
+}
+
+.card-collection {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: stretch;
+  margin: -$card-margin;
+}
+
+.mat-card {
+  height: 256px;
+  width: 256px;
+  overflow: scroll;
+  margin: 8px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}

@@ -1,0 +1,16 @@
+@import 'common';
+
+.page-content {
+  flex: 1 1 auto;
+  padding: 48px 24px 24px;
+
+  & > * {
+    display: block;
+    max-width: 1024px;
+    margin: 0 auto;
+  }
+
+  @media ($mat-xsmall) {
+    padding: 16px;
+  }
+}

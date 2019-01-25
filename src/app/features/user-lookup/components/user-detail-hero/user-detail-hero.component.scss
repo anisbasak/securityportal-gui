@@ -1,0 +1,64 @@
+@import 'common';
+
+:host {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+table {
+  border-spacing: 0px;
+
+  td {
+    vertical-align: top;
+    padding-bottom: 8px;
+  }
+}
+
+.user-detail-gallery {
+  margin: 0 48px 48px 0;
+}
+
+.user-detail-headline {
+  .user-detail-name {
+    margin: 0px;
+    display: flex;
+  }
+
+  .user-detail-dates-button {
+    margin-left: 16px;
+    color: $black-54;
+  }
+}
+
+.user-detail-headline-table {
+  padding-top: 32px;
+
+  .label {
+    font-weight: $weight-medium;
+    color: $black-54;
+    padding-right: 32px;
+  }
+}
+
+.dates-popover-container {
+  @include mat-elevation(4);
+  border-radius: 4px;
+  background-color: white;
+  padding: 8px 16px;
+  margin-top: 16px;
+
+  .date-popover-header {
+    padding: 8px 0 16px;
+    font-size: 18px;
+  }
+
+  table {
+    font-size: 14px;
+  }
+
+  .label {
+    font-weight: $weight-medium;
+    color: $black-54;
+    padding-right: 16px;
+  }
+}

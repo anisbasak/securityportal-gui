@@ -1,0 +1,69 @@
+@import 'common';
+
+:host {
+  display: block;
+  padding: 24px;
+}
+
+table {
+  border-spacing: 0px;
+}
+
+th {
+  border-bottom: solid 1px rgba(0, 0, 0, 0.2);
+  padding-bottom: 8px;
+}
+
+th, td {
+  text-align: left;
+  padding-right: 16px;
+}
+
+// TODO: share these styles with dates popover
+.details-popover-container {
+  @include mat-elevation(4);
+  border-radius: 4px;
+  background-color: white;
+  padding: 8px 16px;
+  margin-top: 16px;
+
+  .details-popover-header {
+    padding: 8px 0 16px;
+    font-size: 18px;
+  }
+
+  table {
+    font-size: 14px;
+  }
+
+  td {
+    vertical-align: top;
+    padding-bottom: 8px;
+  }
+
+  .label {
+    font-weight: $weight-medium;
+    color: $black-54;
+    padding-right: 16px;
+  }
+
+}
+
+.supervisor-link {
+  display: flex;
+  align-items: center;
+  padding: 8px;
+
+  resource-avatar {
+    flex-shrink: 0;
+  }
+
+  .supervisor-name {
+    padding-left: 16px;
+  }
+
+  .supervisor-campus-id {
+    font-size: 14px;
+    padding-left: 8px;
+  }
+}

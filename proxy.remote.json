@@ -1,0 +1,7 @@
+{
+  "/api": {
+    "target": "https://security.ehps.ncsu.edu:443",
+    "secure": false,
+    "changeOrigin": true
+  }
+}

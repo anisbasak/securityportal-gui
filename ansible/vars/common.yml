@@ -1,0 +1,11 @@
+---
+
+project_root:             "{{ playbook_dir }}/.."
+project_dist:             "{{ project_root }}/dist/securityportal-gui"
+project_node_modules:     "{{ project_root }}/node_modules"
+
+remote_base_dir:          "/srv/securityportal"
+remote_dist_dir:          "{{ remote_base_dir }}/dist"
+remote_deploy_dir:        "{{ remote_dist_dir }}/client"
+
+do_logrotate:             true

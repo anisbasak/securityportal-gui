@@ -1,0 +1,43 @@
+@import 'common';
+
+$background: map-get($theme, background);
+$foreground: map-get($theme, foreground);
+
+// Make all snackbar actions uppercase
+button.mat-simple-snackbar-action {
+  text-transform: uppercase;
+}
+
+// From Material guidelines on dialogs
+// TODO(will): file a material issue
+.mat-dialog-content {
+  padding-bottom: 24px !important;
+  line-height: 24px;
+}
+.mat-dialog-actions {
+  padding: 8px !important;
+  margin-right: -24px;
+  justify-content: flex-end;
+}
+
+// See https://github.com/angular/material2/issues/7627
+.mat-select {
+  height: 1.125em;
+}
+
+// TODO(will): open an issue
+.mat-datepicker-toggle {
+  opacity: 0.8;
+}
+.mat-datepicker-toggle[disabled] {
+  opacity: 0.38;
+}
+
+.mat-card.mat-card-no-padding {
+  padding: 0;
+
+  // Don't let card header add reverse margin
+  .sat-card-header {
+    margin: 0;
+  }
+}

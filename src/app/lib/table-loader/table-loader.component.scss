@@ -1,0 +1,47 @@
+@import 'common';
+
+$foreground: map-get($theme, foreground);
+$is-dark-theme: map-get($theme, is-dark);
+
+$sat-empty-message-color: mat-color($foreground, secondary-text);
+$sat-shade-background-color: if($is-dark-theme, $black-87-opacity, $white-87-opacity);
+
+.sat-table-loader {
+  display: block;
+
+  // Allow shade to be absolutely positioned
+  position: relative;
+
+  // Give shade room to breathe
+  &.sat-table-loading {
+    min-height: 200px;
+  }
+}
+
+.sat-table-loader-shade {
+  // Position across all of the wrapper
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+
+  // Shade
+  background-color: $sat-shade-background-color;
+
+  // Center content (typically a spinner)
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sat-table-empty {
+  min-height: 80px;
+  font-size: 14px;
+  color: $sat-empty-message-color;
+
+  // Center content
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

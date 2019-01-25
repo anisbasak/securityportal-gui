@@ -1,0 +1,26 @@
+---
+
+- name: Initialize local development environment setup
+  hosts: all
+  gather_facts: (ansible_host == 'localhost')
+
+  vars_files:
+    - ./vars/common.yml
+
+  tasks:
+    - name: Install angular-cli
+      shell: npm i --global angular-cli
+      connection: local
+
+    - name: Install using npm
+      shell: npm i
+      args:
+        chdir: "{{ project_root }}"
+      connection: local
+
+    - name: Verify same angular-cli versions
+      shell: '{{ item }}'
+      connection: local
+      with_items:
+        - "ng -v"
+        - "{{ project_node_modules }}/.bin/ng -v"

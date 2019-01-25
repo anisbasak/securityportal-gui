@@ -1,0 +1,57 @@
+@import 'common';
+
+$foreground: map-get($theme, foreground);
+
+$pointer-color-false: #d7e2f3;
+$pointer-color-true: #88acde;
+
+$row-border-color: rgba(0,0,0,0.03);
+$row-hover-color: $row-border-color;
+$row-dark-color: $row-border-color;
+
+$title-text-color: $black-87;
+$value-text-color: $black-54;
+
+:host {
+  overflow-x: scroll;
+  display: block;
+}
+
+h4 {
+  margin: 48px 0 24px;
+  color: mat-color($foreground, secondary-text);
+}
+
+table {
+  border-collapse: collapse;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+tr {
+  &:not(:last-child) {
+    border-bottom: solid 1px $row-border-color;
+  }
+
+  &.dark-row {
+    background-color: $row-dark-color;
+  }
+
+  &:hover {
+    background-color: $row-hover-color;
+  }
+}
+
+td {
+  padding: 4px;
+  white-space: nowrap;
+  overflow-x: hidden;
+}
+
+.trait-name {
+  color: $title-text-color;
+}
+
+.value {
+  color: $value-text-color;
+}

@@ -1,0 +1,93 @@
+// Font weights
+$weight-thin: 100;
+$weight-light: 300;
+$weight-regular: 400;
+$weight-medium: 500;
+$weight-bold: 700;
+$weight-black: 900;
+
+// Text colors
+$black-40: rgba(0,0,0,0.40);
+$black-54: rgba(0,0,0,0.54);
+$black-87: rgba(0,0,0,0.87);
+$black-95: rgba(0,0,0,0.95);
+$white-40: rgba(0,0,0,0.40);
+$white-54: rgba(255,255,255,0.54);
+$white-87: rgba(255,255,255,0.87);
+$white-95: rgba(255,255,255,0.95);
+
+// Scale items
+@mixin material-display-4 {
+  font-size: 112px;
+  font-weight: $weight-light;
+  letter-spacing: -5px;
+  line-height: 128px;
+}
+
+@mixin material-display-3 {
+  font-size: 56px;
+  font-weight: $weight-regular;
+  line-height: 64px;
+}
+
+@mixin material-display-2 {
+  font-size: 45px;
+  font-weight: $weight-regular;
+  line-height: 64px; // official leading 48px
+}
+
+@mixin material-display-1 {
+  font-size: 34px;
+  font-weight: $weight-regular;
+  line-height: 52px; // official leading 40px
+}
+
+@mixin material-headline {
+  font-size: 24px;
+  font-weight: $weight-regular;
+  line-height: 32px;
+}
+
+@mixin material-title {
+  font-size: 20px;
+  font-weight: $weight-medium;
+  line-height: 32px;
+}
+
+@mixin material-subheading {
+  font-size: 15px;
+  font-weight: $weight-regular;
+  line-height: 24px;
+  // todo device font-size 16
+}
+
+@mixin material-subheading-2 {
+  @include material-subheading();
+  line-height: 28px;
+}
+
+@mixin material-body-2 {
+  font-size: 13px;
+  font-weight: $weight-medium;
+  line-height: 24px;
+  // todo device font-size 14
+}
+
+@mixin material-body-1 {
+  font-size: 13px;
+  font-weight: $weight-regular;
+  line-height: 20px;
+  // todo device font-size 14
+}
+
+@mixin material-caption {
+  font-size: 12px;
+  font-weight: $weight-regular;
+  // line-height: 32px;
+}
+
+@mixin material-button {
+  font-size: 14px;
+  font-weight: $weight-medium;
+  text-transform: uppercase; // TODO remove duplication everywhere
+}

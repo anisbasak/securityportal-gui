@@ -1,0 +1,42 @@
+@import '~@angular/material/theming';
+@import 'typography';
+@import 'transitions';
+@import 'ncsu-sat-theme';
+@import 'material-variables';
+
+$theme: $ncsu-sat-theme-light;
+// $theme: $ncsu-sat-theme-dark;
+
+//$font-family: 'UniversRoman', sans-serif;
+// $font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,
+//     Oxygen,Ubuntu,Cantarell,"Open Sans","Helvetica Neue", sans-serif;
+$font-family: 'Roboto',"Helvetica Neue",sans-serif;
+
+@mixin fallback-image($height: 36px) {
+  align-items: center;
+  color: $white-95;
+  display: flex;
+  font-size: $height/2;
+  font-weight: 500;
+  justify-content: center;
+  text-shadow: 1px 1px 12px rgba(0,0,0,0.2);
+}
+
+@mixin mat-icon-size($size: 24px) {
+  font-size: $size;
+  height: $size;
+  width: $size;
+}
+
+@mixin mat-icon-button-size($size: 40px) {
+  $icon-size: $size * 0.6;
+
+  height: $size;
+  width: $size;
+  line-height: $size;
+
+  .mat-icon {
+    @include mat-icon-size($icon-size);
+    line-height: $icon-size;
+  }
+}

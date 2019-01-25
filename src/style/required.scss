@@ -1,0 +1,113 @@
+/* Normalized base styles */
+@import "~normalize.css";
+
+/* Material theme */
+@import 'material-overrides';
+
+/* Common mixins and variables */
+@import 'common';
+@import 'typography';
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include mat-core();
+@include angular-material-theme($theme);
+
+/** Global styles */
+@import './global/chips';
+@import './global/dialogs';
+@import './global/inputs';
+@import './global/spinners';
+@import './global/tabs';
+
+$primary: map-get($theme, primary);
+
+body {
+  font-family: $font-family;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: $black-87;
+}
+
+p {
+  line-height: 20px;
+}
+
+a {
+  text-decoration: none !important;
+  color: mat-color($primary);
+}
+
+// Set everything to use border-box
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+
+// Typography
+.display-4 {
+  @include material-display-4();
+}
+.display-3 {
+  @include material-display-3();
+}
+.display-2, h1 {
+  @include material-display-2();
+}
+.display-1, h2 {
+  @include material-display-1();
+}
+
+.headline, h3 {
+  @include material-headline();
+}
+
+.title, h4 {
+  @include material-title();
+}
+
+.subheading, h5 {
+  @include material-subheading();
+}
+
+.subheading-2, h6 {
+  @include material-subheading-2();
+}
+
+.body, p {
+  @include material-body-1();
+}
+
+.body-tall {
+  @include material-body-2();
+}
+
+.caption {
+  @include material-caption();
+}
+
+// This is opt in
+.button {
+  @include material-button();
+}
+
+.code {
+  font-family: monospace;
+  padding: 4px;
+  background: mat-color($background, focused-button);
+  border-radius: 4px;
+}
+
+// This is mostly for debugging purposes, but is nice to have
+.json-viewer {
+  overflow-x: scroll;
+  border-radius: 4px;
+  padding: 8px;
+  font-size: 13px;
+  background-color: rgba(0,0,0,0.87);
+  color: white;
+}

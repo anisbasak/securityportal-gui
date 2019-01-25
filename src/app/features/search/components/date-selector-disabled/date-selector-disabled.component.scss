@@ -1,0 +1,19 @@
+@import 'common';
+
+$foreground: map-get($theme, foreground);
+$primary: map-get($theme, primary);
+
+:host {
+  display: block;
+}
+
+.trait {
+  text-transform: uppercase;
+  font-weight: 700;
+  color: mat-color($primary, 600);
+}
+
+.range {
+  font-size: 13px;
+  color: mat-color($foreground, secondary-text);
+}

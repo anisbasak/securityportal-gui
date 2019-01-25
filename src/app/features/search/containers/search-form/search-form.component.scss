@@ -1,0 +1,93 @@
+@import 'common';
+
+$is-dark-theme:  map-get($theme, is-dark);
+$foreground: map-get($theme, foreground);
+$background: map-get($theme, background);
+$primary: map-get($theme, primary);
+$accent: map-get($theme, accent);
+
+$standard-element-margin: 16px 0;
+$panel-background: if($is-dark-theme, rgba(255, 255, 255, 0.03), rgba(0, 0, 0, .03));
+
+:host {
+  display: block;
+}
+
+.mat-card.solo-input {
+  padding: 0;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+
+  input {
+    font: inherit;
+    outline: none;
+    align-self: stretch;
+    border: none;
+    flex: 1;
+    color: mat-color($foreground, text);
+  }
+
+  .mat-icon {
+    // Position
+    height: 48px;
+    width: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    // Color
+    cursor: pointer;
+    color: mat-color($foreground, secondary-text);
+    transition: opacity 100ms ease-out;
+
+    &:hover {
+      opacity: 0.8;
+    }
+
+    &:active {
+      transform: scale(0.9);
+    }
+  }
+}
+
+.controls {
+  margin: $standard-element-margin;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+}
+
+.verbatim-control {
+  margin-left: auto;
+}
+
+.mini-map {
+  margin: $standard-element-margin;
+}
+
+.blueprints {
+  display: block;
+  margin-left: 8px;
+  margin: $standard-element-margin;
+}
+
+// Style chips with a prefixing icon. Those styles
+// should not affect suffix icons like remove
+.mat-chip .mat-icon:first-child {
+  @include mat-icon-size(18px);
+  opacity: 0.54;
+  margin-right: 8px;
+}
+
+// Matches the specifity to override margin/display
+.mat-chip:not(.mat-basic-chip) {
+  overflow-x: hidden;
+  white-space: nowrap;
+}
+
+glb-slide {
+  margin: $standard-element-margin;
+  background-color: $panel-background;
+  border-radius: 4px;
+}

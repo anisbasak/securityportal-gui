@@ -1,0 +1,32 @@
+@import 'common';
+
+$background: map-get($theme, background);
+$foreground: map-get($theme, foreground);
+$light-foreground: rgba(0, 0, 0, 0.87);
+
+$is-dark-theme: map-get($theme, is-dark);
+$unselected-background: if($is-dark-theme, mat-color($background, card), #e0e0e0);
+$unselected-foreground: if($is-dark-theme, mat-color($foreground, text), $light-foreground);
+$focus-color: mat-color($foreground, secondary-text);
+
+:host {
+  display: inline-block;
+}
+
+.sat-resource-chip {
+  white-space: nowrap;
+}
+
+.sat-resource-contact {
+  margin:
+    (-$mat-chip-vertical-padding)
+    ($mat-chips-contact-margin-after)
+    (-$mat-chip-vertical-padding)
+    (-$mat-chip-horizontal-padding);
+
+  & ::ng-deep .profile-image {
+    @include fallback-image(30px);
+    height: 30px;
+    width: 30px;
+  }
+}

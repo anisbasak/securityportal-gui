@@ -1,0 +1,28 @@
+$standard-result-margin: 8px 0;
+
+:host {
+  display: block;
+}
+
+.search-results-groups {
+  margin: $standard-result-margin;
+}
+
+.search-results-map {
+  height: 400px;
+  margin: $standard-result-margin;
+}
+
+.button-container {
+  margin: 26px auto; // 26 centers the button where the spinner is
+  display: flex;
+  justify-content: center;
+}
+
+.spinner-container {
+  width: 100%;
+}
+
+.mat-spinner {
+  margin: 32px auto;
+}

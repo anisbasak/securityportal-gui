@@ -1,0 +1,46 @@
+@import 'common';
+
+$background: map-get($theme, background);
+$border: solid 1px mat-color($background, selected-disabled-button);
+
+:host {
+  display: inline-block;
+}
+
+.mat-button-toggle-group {
+  width: 225px;
+  flex-wrap: wrap;
+  box-shadow: none;
+  border: $border;
+  border-right: none;
+  border-bottom: none;
+  cursor: default;
+
+  &.disabled {
+    opacity: 0.6;
+  }
+
+  // 7 toggles per row
+  .mat-button-toggle {
+    width: 32px;
+  }
+
+  // 4 toggles per row
+  &.medium .mat-button-toggle {
+    width: 56px;
+  }
+
+  // 2 toggles per row
+  &.large .mat-button-toggle {
+    width: 112px;
+  }
+}
+
+.mat-button-toggle ::ng-deep .mat-button-toggle-label-content {
+  padding: 0;
+  width: 100%;
+  text-align: center;
+  border: $border;
+  border-left: none;
+  border-top: none;
+}

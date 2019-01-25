@@ -1,0 +1,92 @@
+@import 'common';
+
+:host {
+  display: flex;
+  align-items: flex-start;
+}
+
+.result-container {
+  flex: 1;
+}
+
+.result {
+  @include mat-elevation(1);
+  cursor: pointer;
+  padding: 8px;
+  margin-bottom: 8px;
+  background: white;
+  border-radius: 4px;
+  color: black;
+  font-size: 14px;
+  transition: 0.1s ease-out;
+  display: flex;
+  align-items: center;
+
+  &:hover {
+    @include mat-elevation(2);
+    transform: scale(1.03);
+  }
+}
+
+.result__name {
+  margin-left: 16px;
+  flex: 1;
+}
+
+.result__detail {
+  opacity: 0;
+  color: $black-40;
+  transition: 0.1s ease-out;
+  transform: translateX(-10px);
+  height: 36px;
+  width: 36px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &:hover {
+    color: $black-54;
+  }
+}
+
+.result:hover .result__detail {
+  opacity: 1;
+  transform: translateX(0px);
+}
+
+.preview-container {
+  flex: 1;
+  position: sticky;
+  top: 32px;
+  display: none;
+}
+
+.preview {
+  padding: 16px;
+  background: rgba(0, 0, 0, 0.03);
+  border-radius: 8px;
+  align-self: start;
+  position: relative;
+}
+
+.preview__detail {
+  color: $black-40;
+  position: absolute;
+  top: 16px;
+  right: 16px;
+
+  &:hover {
+    color: $black-54;
+  }
+}
+
+// Note: this breakpoint is coupled with the component source
+@media (min-width: 600px) {
+  .preview-container {
+    display: block;
+  }
+
+  .result-container {
+    margin-right: 32px;
+  }
+}

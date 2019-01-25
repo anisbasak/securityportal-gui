@@ -1,0 +1,19 @@
+$badge-unknown: #cccccc;
+$badge-inactive: #c0392b;
+$badge-active: #2ecc71;
+
+:host {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background-color: $badge-unknown;
+  border-radius: 50%;
+
+  &.active {
+    background-color: $badge-active;
+  }
+
+  &.inactive {
+    background-color: $badge-inactive;
+  }
+}

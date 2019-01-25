@@ -1,0 +1,17 @@
+@import 'common';
+
+$background-color: #f9f9f9;
+
+:host {
+  @include mat-elevation(4);
+  display: block;
+  border-radius: 4px;
+  padding: 16px 24px;
+  min-width: 240px;
+  background: $background-color
+}
+
+.mat-subheading-2 {
+  margin: 0;
+  font-weight: 500;
+}

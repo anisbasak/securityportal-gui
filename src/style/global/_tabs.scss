@@ -1,0 +1,27 @@
+@import 'common';
+
+$primary: map-get($theme, primary);
+
+$ripple-color: $white-12-opacity;
+
+// Styles for the featurebar tabs which specifically use the primary-600 color
+// for their background
+.sat-featurebar-tabs.mat-tab-nav-bar.mat-background-primary .mat-tab-links {
+
+  background-color: mat-color($primary, 600);
+
+  // Increase text visibility and don't use background focus color
+  .mat-tab-link {
+    opacity: 0.78;
+
+    &:focus {
+      opacity: 1;
+      background: none;
+    }
+
+    .mat-ripple-element {
+      background-color: $ripple-color;
+    }
+  }
+
+}

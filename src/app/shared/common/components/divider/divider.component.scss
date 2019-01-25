@@ -1,0 +1,11 @@
+@import 'common';
+
+$foreground: map-get($theme, foreground);
+
+:host {
+  display: block;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: mat-color($foreground, divider);
+  margin: 0;
+}

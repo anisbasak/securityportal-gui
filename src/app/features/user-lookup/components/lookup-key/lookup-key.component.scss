@@ -1,0 +1,15 @@
+
+:host {
+  display: block;
+}
+
+app-lookup-key-number,
+app-lookup-key-text,
+app-lookup-key-boolean,
+app-lookup-key-date  {
+  display: block;
+}
+
+::ng-deep label, ::ng-deep select {
+  margin-right: 16px;
+}

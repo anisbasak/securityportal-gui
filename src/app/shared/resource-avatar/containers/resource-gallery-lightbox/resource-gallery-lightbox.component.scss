@@ -1,0 +1,32 @@
+:host {
+  display: block;
+  line-height: 0;
+  color: white;
+  overflow: hidden;
+}
+
+.image {
+  max-width: calc(100vw - 80px);
+}
+
+.caption {
+  position: absolute;
+}
+
+.nav--prev {
+  position: fixed;
+  left: 0;
+  top: 50%;
+}
+
+.nav--next {
+  position: fixed;
+  right: 0;
+  top: 50%;
+}
+
+.nav--exit {
+  position: fixed;
+  right: 0;
+  top: 0;
+}

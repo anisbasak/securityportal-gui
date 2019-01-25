@@ -1,0 +1,27 @@
+:host {
+  display: block;
+}
+
+.frequency-select {
+  margin-bottom: 16px;
+
+  .mat-form-field {
+    width: 96px;
+  }
+
+  input {
+    text-align: center;
+  }
+}
+
+dow-select {
+  margin-bottom: 32px;
+}
+
+dom-select {
+  margin: 8px 0 16px;
+}
+
+moy-select {
+  margin-bottom: 32px;
+}

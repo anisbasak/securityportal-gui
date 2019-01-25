@@ -1,0 +1,13 @@
+@import 'common';
+
+:host {
+  display: block;
+}
+
+.mat-form-field {
+  width: 100%;
+}
+
+.clear-input {
+  cursor: pointer;
+}

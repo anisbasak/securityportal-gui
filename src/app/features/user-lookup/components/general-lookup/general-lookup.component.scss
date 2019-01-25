@@ -1,0 +1,34 @@
+@import 'common';
+
+$foreground: map-get($theme, foreground);
+
+:host {
+  display: block;
+}
+
+.lookup {
+  padding: 0;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.lookup--input {
+  font: inherit;
+  outline: none;
+  align-self: stretch;
+  border: none;
+  flex: 1;
+  color: mat-color($foreground, text);
+  padding: 0 12px 0 0; // match the padding of the icon
+}
+
+.lookup--icon {
+  height: 48px;
+  width: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: mat-color($foreground, secondary-text);
+  cursor: default;
+}

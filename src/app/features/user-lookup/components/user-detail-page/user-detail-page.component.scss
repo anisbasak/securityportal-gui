@@ -1,0 +1,19 @@
+@import 'common';
+
+:host {
+  display: block;
+}
+
+.user-detail-hero {
+  margin-bottom: 48px;
+}
+
+.mat-title {
+  margin-bottom: 8px;
+}
+
+mat-card {
+  margin-bottom: 32px;
+  padding: 0px;
+  overflow: scroll;
+}

@@ -1,0 +1,27 @@
+@import 'common';
+
+$background: map-get($theme, background);
+$primary: map-get($theme, primary);
+$accent: map-get($theme, accent);
+$warn: map-get($theme, warn);
+
+:host {
+  display: inline-block;
+  background-color: mat-color($primary);
+  border-radius: 50%;
+  border: solid 2px mat-color($background, background);
+  height: 10px;
+  position: absolute;
+  right: 6px;
+  top: 8px;
+  width: 10px;
+
+  &.accent {
+    background-color: mat-color($accent);
+  }
+
+  &.warn {
+    background-color: mat-color($warn);
+  }
+}
+

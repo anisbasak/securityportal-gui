@@ -1,0 +1,30 @@
+:host {
+  display: block;
+}
+
+.mat-card {
+  margin: 8px;
+}
+
+.headline {
+  line-height: 1;
+}
+
+.admin-features {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: stretch;
+
+  .feature-list-item {
+    height: 216px;
+    width: 256px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .mat-card {
+    height: 100%;
+    width: 100%;
+  }
+}

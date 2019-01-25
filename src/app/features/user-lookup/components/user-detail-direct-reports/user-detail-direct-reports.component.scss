@@ -1,0 +1,37 @@
+@import 'common';
+
+:host {
+  display: block;
+  padding: 24px;
+  max-height: 480px;
+}
+
+.report {
+  display: block;
+}
+
+.report-link {
+  display: flex;
+  align-items: center;
+  padding: 8px;
+
+  resource-avatar {
+    flex-shrink: 0;
+  }
+
+  .report-name {
+    padding-left: 16px;
+  }
+
+  .report-campus-id {
+    font-size: 14px;
+    padding-left: 8px;
+  }
+}
+
+
+.inactive-label {
+  font-size: 14px;
+  padding-left: 8px;
+  color: $black-54;
+}

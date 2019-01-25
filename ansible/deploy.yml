@@ -1,0 +1,43 @@
+---
+
+- name: Build and Deploy
+  hosts: all
+  gather_facts: (ansible_host != 'localhost')
+
+  vars_files:
+    - ./vars/common.yml
+  
+  tasks:
+    - name: 'Install packages'
+      shell: npm i chdir="{{ project_root }}"
+      connection: local
+
+    - name: Build, type='{{ build_type }}'
+      shell: npm run build:{{ build_type }} chdir="{{ project_root }}"
+      connection: local
+      run_once: true
+      when: build_type is defined
+
+    - name: Deploy the dist folder to {{ remote_deploy_dir }}
+      synchronize:
+        src: '{{ project_dist }}/'
+        dest: '{{ remote_deploy_dir }}/'
+        mode: push
+        archive: true
+        compress: true
+        group: false
+        owner: false
+        times: false
+        perms: false
+        delete: true
+
+    - name: Set permissions on {{ remote_deploy_dir }}
+      file:
+        path: '{{ remote_deploy_dir }}'
+        owner: '{{ generic_user.username }}' 
+        group: '{{ generic_group }}'
+        mode: 0770
+        recurse: true
+      become: true
+
+

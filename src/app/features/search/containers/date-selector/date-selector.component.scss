@@ -1,0 +1,61 @@
+@import 'common';
+
+$foreground: map-get($theme, foreground);
+
+:host {
+  display: block;
+  padding: 16px;
+  position: relative;
+}
+
+.form-controls {
+  display: flex;
+  justify-content: flex-end;
+  .button {
+    margin-bottom: 16px;
+  }
+  .button:not(:last-child) {
+    margin-right: 16px;
+  }
+
+  .mat-icon {
+    @include mat-icon-size(16px);
+    margin: 0 8px 2px 0;
+  }
+}
+
+.empty-message {
+  margin: 8px 0;
+}
+
+.form-clause {
+  border-left: solid 4px mat-color($foreground, divider);
+  padding: 8px 16px;
+}
+
+.separator {
+  margin: 16px 0;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+
+  &.and {
+    color: mat-color($foreground, hint-text);
+  }
+
+  &.or {
+    color: mat-color($foreground, secondary-text);
+  }
+}
+
+.add-clause-button {
+  text-transform: none;
+  margin: 8px 0;
+}
+
+// Expand the buttons to stretch container width
+@media ($mat-xsmall) {
+  .form-controls .button {
+    flex: 1;
+  }
+}

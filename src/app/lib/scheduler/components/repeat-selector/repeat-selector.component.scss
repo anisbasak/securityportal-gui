@@ -1,0 +1,19 @@
+@import 'common';
+
+$foreground: map-get($theme, foreground);
+$background: map-get($theme, background);
+
+:host {
+  display: block;
+}
+
+.description {
+  margin-bottom: 16px;
+  font-size: 13px;
+  color: mat-color($foreground, secondary-text);
+}
+
+.repeat-overlay {
+  @include mat-elevation(12);
+  background: mat-color($background, dialog);;
+}

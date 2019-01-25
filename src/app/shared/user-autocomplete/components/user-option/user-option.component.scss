@@ -1,0 +1,27 @@
+@import 'common';
+
+$height: 48px;
+$avatar-height: 32px;
+
+:host {
+  display: flex;
+  align-items: center;
+  height: $height;
+}
+
+.avatar {
+  margin-right: 16px;
+  flex-shrink: 0;
+
+  & ::ng-deep .profile-image {
+    @include fallback-image($avatar-height);
+    height: $avatar-height;
+    width: $avatar-height;
+  }
+}
+
+.name {
+  font-size: 14px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
